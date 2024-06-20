@@ -1,0 +1,62 @@
+import 'package:get/get.dart';
+
+class ValidationService {
+  static String? validateEmail(String? value) {
+    final RegExp emailRegExp = RegExp(
+      r'^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+',
+    );
+    if (value!.isEmpty) {
+      return 'email_validation_msg1'.tr;
+    } else if ((emailRegExp.hasMatch(value) &&
+            !value.contains('.com.com') &&
+            !value.contains('.in.com') &&
+            !value.contains('.com.in')) ==
+        false) {
+      return 'email_validation_msg2'.tr;
+    }
+    return null;
+  }
+
+  static String? validatePass(String? value) {
+    if (value!.isEmpty) {
+      return 'password_validation_msg'.tr;
+    }
+
+    return null;
+  }
+
+  static String? validateRePass(String? value1, String? value2) {
+    if (value1!.isEmpty) {
+      return 'confirm_pass_validation_msg1'.tr;
+    } else if (value2 != value1) {
+      return 'confirm_pass_validation_msg2'.tr;
+    }
+
+    return null;
+  }
+
+  static String? validateNumber(String? value) {
+    if (value!.isEmpty) {
+      return 'mobile_validation_msg1'.tr;
+    }
+
+    if (value.length < 10) {
+      return 'mobile_validation_msg2'.tr;
+    }
+    return null;
+  }
+
+  static String? validateDropDown(Object? value, String? message) {
+    if (value == null) {
+      return "  $message";
+    }
+    return null;
+  }
+
+  static String? validateString(String? value, String? message) {
+    if (value!.isEmpty) {
+      return '$message';
+    }
+    return null;
+  }
+}
