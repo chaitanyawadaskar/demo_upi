@@ -10,6 +10,8 @@ final kBorderAllOrange = Border.all(color: CustomColors.borderOrange, width: 1);
 final kBorderAllOrangetwo =
     Border.all(color: CustomColors.borderOrange, width: 5);
 final kBorderAllGrey = Border.all(color: CustomColors.grey, width: 1);
+final kBorderAllFaintGrey =
+    Border.all(color: CustomColors.grey.withOpacity(0.5), width: 2);
 final kBorderAllThinkWhite = Border.all(color: CustomColors.white, width: 10);
 final kBorderAllRed = Border.all(color: CustomColors.red, width: 1);
 final kBorderAllwhite = Border.all(color: CustomColors.white, width: 1);

@@ -10,6 +10,7 @@ class CustomColors {
   static const Color redAccent = Colors.redAccent;
   static const Color red = Colors.red;
   static const Color darkRed = Color(0xffF80101);
+  static const Color fontGrey = Color(0xffADADAD);
   static const Color amber = Colors.amber;
   static Color shadeGrey500 = Colors.grey.shade500;
   static Color shadeGrey300 = Colors.grey.shade300;

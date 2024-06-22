@@ -1,3 +1,4 @@
+import 'package:dhoond/utilities/theme/ktext_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:math';
@@ -6,16 +7,16 @@ import '../custom_colors/custom_colors.dart';
 
 class AppTheme {
   static ThemeData light = ThemeData(
+    // textTheme: TextTheme(labelLarge: KText.r20Bold),
     fontFamily: GoogleFonts.roboto(color: CustomColors.black).fontFamily,
     primarySwatch: generateMaterialColor(Palette.primary),
     inputDecorationTheme:
         const InputDecorationTheme(focusColor: CustomColors.black),
-    scaffoldBackgroundColor: CustomColors.bgBlue,
+    scaffoldBackgroundColor: CustomColors.white,
     cardColor: CustomColors.white,
     useMaterial3: true,
-    drawerTheme:
-        const DrawerThemeData(backgroundColor: CustomColors.darkPurple),
-    splashColor: CustomColors.bgBlue,
+    drawerTheme: const DrawerThemeData(backgroundColor: CustomColors.white),
+    splashColor: CustomColors.white,
   );
   static ThemeData dark = ThemeData(
     fontFamily: GoogleFonts.roboto(color: CustomColors.black).fontFamily,
